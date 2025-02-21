@@ -3,6 +3,9 @@ import MainLayout from "../MainLayout/MainLayout";
 import Home from "../Home/Home";
 import Login from "../AuthRelated/Login/Login";
 import Register from "../AuthRelated/Register/Register";
+import TaskManageMent from "../Pages/TaskManageMent/TaskManageMent";
+import AddTasks from "../Pages/AddTasks/AddTasks"; 
+import AllTasks from "../Pages/AllTasks/AllTasks";
 
 const router = createBrowserRouter([
     {
@@ -13,6 +16,18 @@ const router = createBrowserRouter([
         {
             path:"/",
             element:<Home></Home>
+        },
+        {
+          path:"/addTasks",
+          element:<AddTasks></AddTasks>
+        },
+        {
+          path:"/taskManage",
+          element:<TaskManageMent></TaskManageMent>
+        }, 
+        {
+          path:"/tasks",
+          element:<AllTasks></AllTasks>
         }
       ]
     },

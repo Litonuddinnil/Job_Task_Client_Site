@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+[data-theme="black"] {
+    background-color: black;
+    color: white;
+  }
+ 
+  [data-theme="winter"]{
+    background-color: #eff8fb;
+    color: #040f12;
+  }

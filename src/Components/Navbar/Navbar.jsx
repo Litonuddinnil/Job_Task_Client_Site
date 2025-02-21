@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import useAuth from '../../hooks/useAuth';
-
+import animationDataLogo from "../../assets/logo.json";
+import Lottie from "lottie-react";
 const Navbar = () => {
   const { user, logOut } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,54 +19,34 @@ const Navbar = () => {
     <>
       <li>
         <NavLink
-          to="/"
-          className={({ isActive }) =>
-            isActive ? 'text-primary font-bold' : 'hover:text-primary'
-          }
-        >
-          Dashboard
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
           to="/tasks"
           className={({ isActive }) =>
             isActive ? 'text-primary font-bold' : 'hover:text-primary'
           }
         >
-          Tasks
+          Task
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/tasks/todo"
+          to="/taskManage"
           className={({ isActive }) =>
             isActive ? 'text-primary font-bold' : 'hover:text-primary'
           }
         >
-          To-Do
+          Tasks Manage
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/tasks/in-progress"
+          to="/addTasks"
           className={({ isActive }) =>
             isActive ? 'text-primary font-bold' : 'hover:text-primary'
           }
         >
-          In Progress
+          AddTasks
         </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/tasks/done"
-          className={({ isActive }) =>
-            isActive ? 'text-primary font-bold' : 'hover:text-primary'
-          }
-        >
-          Done
-        </NavLink>
-      </li>
+      </li>  
     </>
   );
 
@@ -73,8 +54,14 @@ const Navbar = () => {
     <nav
       className={`sticky top-0 z-50 ${theme === 'winter' ? 'bg-base-100' : 'bg-black'} shadow-md px-6 md:px-12 py-3 flex justify-between items-center`}
     >
+
       <Link to="/" className="text-2xl font-bold text-primary flex items-center">
-        <span>Task Manager</span>
+       <div className=" flex items-center justify-center text-2xl font-bold">
+            <div className="w-12 h-12">
+              <Lottie animationData={animationDataLogo}></Lottie>
+            </div>
+            <h2>Job Task</h2>
+          </div>
       </Link>
 
       <ul className="hidden md:flex space-x-6 list-none">{links}</ul>

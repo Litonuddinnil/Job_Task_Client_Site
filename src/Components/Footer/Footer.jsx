@@ -1,6 +1,6 @@
 import Lottie from "lottie-react";
 import React from "react";
-import animationDataLogo from "../assets/logo.json"
+import animationDataLogo from "../../assets/logo.json"
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
             <Lottie animationData={animationDataLogo}></Lottie>
         
             </div>
-            <h2 className="font-bold text-lg">JobPortal</h2>
+            <h2 className="font-bold text-lg">Job Task</h2>
             </div>
           <p className="mt-2 text-sm">
             Your trusted platform for finding the perfect job or hiring the right candidate.
@@ -47,7 +47,7 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold mb-4">Contact Us</h3>
           <p className="text-sm">
-            Email: <a href="mailto:info@jobportal.com" className="link link-hover">info@jobportal.com</a>
+            Email: <a href="mailto:info@Job Task.com" className="link link-hover">info@Job Task.com</a>
           </p>
           <p className="text-sm">
             Phone: <a href="tel:+123456789" className="link link-hover">+123-456-789</a>
@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-gray-600 text-white text-center py-4">
-        <p className="text-sm">&copy; 2024 JobPortal. All rights reserved.</p>
+        <p className="text-sm">&copy; 2024 Job Task. All rights reserved.</p>
       </div>
     </footer>
   );
