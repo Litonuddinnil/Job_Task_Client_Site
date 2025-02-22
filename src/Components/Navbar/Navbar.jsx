@@ -17,6 +17,16 @@ const Navbar = () => {
 
   const links = (
     <>
+     <li>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? 'text-primary font-bold' : 'hover:text-primary'
+          }
+        >
+          Home
+        </NavLink>
+      </li>  
       <li>
         <NavLink
           to="/tasks"
@@ -37,16 +47,6 @@ const Navbar = () => {
           Tasks Manage
         </NavLink>
       </li>
-      <li>
-        <NavLink
-          to="/addTasks"
-          className={({ isActive }) =>
-            isActive ? 'text-primary font-bold' : 'hover:text-primary'
-          }
-        >
-          AddTasks
-        </NavLink>
-      </li>  
     </>
   );
 
