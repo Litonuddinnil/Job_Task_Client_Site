@@ -21,7 +21,7 @@ const AddTasks = () => {
     e.preventDefault();
     if (!user) return toast.error("Please log in first"); 
     try {
-      await axios.post("http://localhost:5000/tasks", {
+      await axios.post("https://job-task-server-site.vercel.app/tasks", {
         ...task, 
         timestamp: new Date().toISOString(),
       });
