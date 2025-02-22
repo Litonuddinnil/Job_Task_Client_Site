@@ -1,10 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast } from "react-toastify";  
 import useAuth from "../../hooks/useAuth";
 
-const AddTasks = () => {
-  const { user } = useAuth();
+const AddTasks = () => { 
+  const {user} = useAuth();
   const [task, setTask] = useState({
     title: "",
     description: "",
@@ -19,14 +19,13 @@ const AddTasks = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!user) return toast.error("Please log in first");
-
+    if (!user) return toast.error("Please log in first"); 
     try {
       await axios.post("http://localhost:5000/tasks", {
-        ...task,
-        userId: user.uid,
+        ...task, 
         timestamp: new Date().toISOString(),
       });
+      
       toast.success("Task posted successfully!");
       setTask({ title: "", description: "", category: "To-Do", deadline: "", budget: "" });
     } catch (error) {

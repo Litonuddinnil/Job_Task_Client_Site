@@ -67,7 +67,7 @@ const Register = () => {
           .then(() => {
             toast.success("Registration successful!");
             navigate("/");
-            const newUser = { name, email, photo };
+            const newUser = { name, email, photo,uid:user.uid };
             fetch('http://localhost:5000/users', {
               method: "POST",
               headers: {
