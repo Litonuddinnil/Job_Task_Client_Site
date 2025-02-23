@@ -52,7 +52,7 @@ const AllTasks = () => {
   const handleSave = async () => {
     try {
       const updatedTask = selectedTask;
-      await axiosPublic.put(`/task/edit/${updatedTask._id}`, updatedTask);
+      await axiosPublic.put(`/task/${updatedTask._id}`, updatedTask);
       socket.emit("taskUpdated", updatedTask);
       Swal.fire("Updated!", "Your task has been updated.", "success");
       refetch(); // Refetch tasks after update

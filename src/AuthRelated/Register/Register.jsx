@@ -68,7 +68,7 @@ const Register = () => {
             toast.success("Registration successful!");
             navigate("/");
             const newUser = { name, email, photo,uid:user.uid };
-            fetch('https://job-task-server-site.vercel.app/users', {
+            fetch('https://job-task-server-site.onrender.com/users', {
               method: "POST",
               headers: {
                 'Content-Type': 'application/json'
